@@ -12,7 +12,10 @@ import UIKit
  A ChartAxisValue models a value along a particular chart axis. For example, two ChartAxisValues represent the two components of a ChartPoint. It has a backing Double scalar value, which provides a canonical form for all subclasses to be laid out along an axis. It also has one or more labels that are drawn in the chart.
  This class is not meant to be instantiated directly. Use one of the existing subclasses or create a new one.
  */
-open class ChartAxisValue: Equatable, Hashable, CustomStringConvertible {
+open class ChartAxisValue: Equatable, Hashable, CustomStringConvertible, Comparable {
+    public static func < (lhs: ChartAxisValue, rhs: ChartAxisValue) -> Bool {
+        return lhs.scalar < rhs.scalar
+    }
     
     /// The backing value for all other types of axis values
     public let scalar: Double
@@ -53,3 +56,8 @@ open class ChartAxisValue: Equatable, Hashable, CustomStringConvertible {
 public func ==(lhs: ChartAxisValue, rhs: ChartAxisValue) -> Bool {
     return lhs.scalar =~ rhs.scalar
 }
+
+public func >(lhs: ChartAxisValue, rhs: ChartAxisValue) -> Bool {
+    return lhs.scalar > rhs.scalar
+}
+

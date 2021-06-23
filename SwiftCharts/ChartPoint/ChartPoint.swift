@@ -8,7 +8,10 @@
 
 import UIKit
 
-open class ChartPoint: Hashable, Equatable, CustomStringConvertible {
+open class ChartPoint: Hashable, Equatable, CustomStringConvertible, Comparable {
+    public static func < (lhs: ChartPoint, rhs: ChartPoint) -> Bool {
+        return lhs.x < rhs.x
+    }
     
     public let x: ChartAxisValue
     public let y: ChartAxisValue
@@ -38,4 +41,8 @@ open class ChartPoint: Hashable, Equatable, CustomStringConvertible {
 
 public func ==(lhs: ChartPoint, rhs: ChartPoint) -> Bool {
     return lhs.x == rhs.x && lhs.y == rhs.y
+}
+
+public func >(lhs: ChartPoint, rhs: ChartPoint) -> Bool {
+    return lhs.x > rhs.x
 }
