@@ -25,9 +25,13 @@ open class StraightLinePathGenerator: ChartLinesViewPathGenerator {
             for i in 0..<(points.count - 1) {
                 let p1 = points[i]
                 let p2 = points[i + 1]
-            
+                
                 progressline.move(to: p1)
-                progressline.addLine(to: p2)
+                
+                if(p1.distance(p2) < 30)
+                {
+                    progressline.addLine(to: p2)
+                }
             }
         }
         

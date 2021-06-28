@@ -60,4 +60,3 @@ public func ==(lhs: ChartAxisValue, rhs: ChartAxisValue) -> Bool {
 public func >(lhs: ChartAxisValue, rhs: ChartAxisValue) -> Bool {
     return lhs.scalar > rhs.scalar
 }
-
