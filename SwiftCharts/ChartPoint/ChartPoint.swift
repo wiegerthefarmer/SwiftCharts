@@ -16,17 +16,20 @@ open class ChartPoint: Hashable, Equatable, CustomStringConvertible, Comparable 
     public let x: ChartAxisValue
     public let y: ChartAxisValue
     public let emoji: String
+    public let slope: String
     
     required public init(x: ChartAxisValue, y: ChartAxisValue) {
         self.x = x
         self.y = y
         self.emoji = ""
+        self.slope = ""
     }
     
-    public init(x: ChartAxisValue, y: ChartAxisValue, emoji: String) {
+    public init(x: ChartAxisValue, y: ChartAxisValue, emoji: String, slope: String) {
         self.x = x
         self.y = y
         self.emoji = emoji
+        self.slope = slope
     }
     
     open var description: String {
