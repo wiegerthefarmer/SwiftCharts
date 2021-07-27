@@ -20,7 +20,7 @@ public struct ChartLabelSettings {
     public var shiftXOnRotation: Bool
     public var textAlignment: ChartLabelTextAlignment
     
-    public init(font: UIFont = UIFont.systemFont(ofSize: 14), fontColor: UIColor = UIColor.black, rotation: CGFloat = 0, rotationKeep: ChartLabelDrawerRotationKeep = .center, shiftXOnRotation: Bool = true, textAlignment: ChartLabelTextAlignment = .default) {
+    public init(font: UIFont = UIFont.systemFont(ofSize: 14), fontColor: UIColor = UIColor.black, rotation: CGFloat = 0, rotationKeep: ChartLabelDrawerRotationKeep = .center, shiftXOnRotation: Bool = true, textAlignment: ChartLabelTextAlignment = .right) {  
         self.font = font
         self.fontColor = fontColor
         self.rotation = rotation
