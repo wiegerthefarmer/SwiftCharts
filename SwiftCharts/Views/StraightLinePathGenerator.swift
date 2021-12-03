@@ -9,7 +9,7 @@
 import UIKit
 
 open class StraightLinePathGenerator: ChartLinesViewPathGenerator {
-    
+      
     public init() {}
     
     open func generatePath(points: [CGPoint], lineWidth: CGFloat) -> UIBezierPath {
@@ -29,7 +29,7 @@ open class StraightLinePathGenerator: ChartLinesViewPathGenerator {
                 progressline.move(to: p1)
                 
                 
-                if(p1.x.distance(to: p2.x) < 30)
+                if(p1.x.distance(to: p2.x) < 7)
                 {
                     progressline.addLine(to: p2)
                 }
