@@ -29,7 +29,7 @@ open class StraightLinePathType2Generator: ChartLinesViewPathGenerator {
                 progressline.move(to: p1)
                 
                 
-                if(p1.x.distance(to: p2.x) < 7)
+                if(p1.x.distance(to: p2.x) < 30)
                 {
                     progressline.addLine(to: p2)
                 }
